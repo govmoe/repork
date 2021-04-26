@@ -1,1 +1,1 @@
-## Govmoe-Public-Now.sh CDN Services.
+## Govmoe-Public CDN Services.
