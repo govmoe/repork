@@ -1,0 +1,3796 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nMon简体中文</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <style>
+
+
+/*
+Based on Minimal CSS (minimalcss.com) under the MIT license.
+*/
+
+/* Reset */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Layout */
+body { font: 14px/20px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.container { position: relative; max-width: 90%; margin: 0 auto; }
+
+/* Typography */
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 20px; margin: 10px 0; }
+h2 { font-size: 20px; line-height: 20px; margin: 10px 0; }
+h3 { font-size: 16px; line-height: 20px; margin: 10px 0; }
+h4 { font-size: 14px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 12px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 10px; line-height: 20px; margin: 10px 0; }
+
+p { margin-bottom: 10px; }
+
+.float-left     { float: left; }
+.float-right    { float: right; }
+img.float-left  { float: left; margin: 0 20px 20px 0; }
+img.float-right { float: right; margin: 0 0 20px 20px; }
+img.center      { margin: 0 auto; display: block; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* List */
+ul { list-style-position:inside; }
+ol { list-style-position:inside; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th { font-weight: bold; }
+tfoot { font-style: italic; }
+
+/* Metadata part */
+
+.metadata {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+table.metadata td {
+  padding-right: 20px;
+}
+
+.stats {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.graph {
+  width: 100%;
+}
+.graph div { float: left; }
+.graph div:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.graph div:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.legend {
+  font-size: smaller;
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Translations */
+table.translations {
+  width: 100%;
+  table-layout: fixed;
+}
+table.translations th, table.translations td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #F1F1F1;
+}
+table.translations th {
+  text-align: left;
+}
+table.translations th:first-child, table.translations td:first-child { padding-left: 0; }
+table.translations th:last-child, table.translations td:last-child { padding-right: 0; }
+
+.with-comments td {
+  border-bottom: none !important;
+}
+tr.comments div {
+  float: left;
+  max-width: 90%;
+  font-size: smaller;
+}
+tr.comments div p:last-child { margin-bottom: 0; }
+tr.comments td { padding-top: 0; }
+
+.msgctxt {
+  font-size: smaller;
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin-right: 4px;
+}
+
+
+/* Colors */
+
+body { background-color: #fff; color: #333; }
+
+.percent-done    { background-color: rgb(146, 236, 106); height: 10px; }
+.percent-fuzzy   { background-color: rgb(255, 149, 0); height: 10px; }
+.percent-untrans { background-color: #F1F1F1; height: 10px; }
+.legend          { color: #aaa; }
+tr.comments div  { color: #aaa; }
+.fuzzy .tra      { color: rgb(230, 134, 0); }
+
+.msgctxt         { color: rgb(70, 109, 137); background-color: rgb(217, 232, 242); }
+
+
+@media (prefers-color-scheme: dark) {
+    body             { background-color: rgb(45, 42, 41); color: #eee; }
+    .percent-untrans { background-color: rgba(255, 255, 255, 0.3); }
+    .legend          { color: rgba(255, 255, 255, 0.6); }
+    tr.comments div  { color: rgba(255, 255, 255, 0.6); }
+    .fuzzy .tra      { color: rgb(253, 178, 72); }
+    .msgctxt         { color: rgb(180, 222, 254); background-color: rgba(67, 94, 147, 0.6); }
+    table.translations th, table.translations td { border-bottom: 1px solid #333; }
+}
+
+
+  </style>
+</head>
+<body>
+<div class='container'>
+<table class='metadata'>
+<tr><td>项目：</td><td>nMon简体中文</td></tr>
+<tr><td>语言：</td><td>中文（简体）</td></tr>
+</table>
+<div class='stats'>
+  <div class='graph'>
+    <div class='percent-done' style='width: 48.7437%'>&nbsp;</div>
+    <div class='percent-untrans' style='width: 51.2563%'>&nbsp;</div>
+  </div>
+  <div class='legend'>已翻译：291 共计 597 (48 %)  •  剩余：306  </div>
+</div>
+<table class='translations'>
+  <thead>
+    <tr>
+      <th>源文本 — 英文</th>
+      <th>翻译 — 中文（简体）</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='i'>
+<td class='src'  lang='en'>
+All times are</td>
+<td class='tra'  lang='zh-Hans'>
+所属时区</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The time now is</td>
+<td class='tra'  lang='zh-Hans'>
+现在时间是</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+s</td>
+<td class='tra'  lang='zh-Hans'>
+秒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No entries to show</td>
+<td class='tra'  lang='zh-Hans'>
+没有可显示的条目</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Nothing found</td>
+<td class='tra'  lang='zh-Hans'>
+未找到</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Showing</td>
+<td class='tra'  lang='zh-Hans'>
+显示从</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+to</td>
+<td class='tra'  lang='zh-Hans'>
+到</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+of</td>
+<td class='tra'  lang='zh-Hans'>
+共</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+entries</td>
+<td class='tra'  lang='zh-Hans'>
+条</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Next</td>
+<td class='tra'  lang='zh-Hans'>
+下一页</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Previous</td>
+<td class='tra'  lang='zh-Hans'>
+上一页</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+First Page</td>
+<td class='tra'  lang='zh-Hans'>
+首页</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last Page</td>
+<td class='tra'  lang='zh-Hans'>
+尾页</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enter email address to reset your password</td>
+<td class='tra'  lang='zh-Hans'>
+输入您的电子邮件地址</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email</td>
+<td class='tra'  lang='zh-Hans'>
+电子邮件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Continue</td>
+<td class='tra'  lang='zh-Hans'>
+继续</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log In</td>
+<td class='tra'  lang='zh-Hans'>
+登录</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Password</td>
+<td class='tra'  lang='zh-Hans'>
+新密码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Toggle navigation</td>
+<td class='tra'  lang='zh-Hans'>
+切换导航</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hooray! All servers are healthy.</td>
+<td class='tra'  lang='zh-Hans'>
+恭喜！所有服务器都很健康。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You have</td>
+<td class='tra'  lang='zh-Hans'>
+您有</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+server alerts.</td>
+<td class='tra'  lang='zh-Hans'>
+服务器警报。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Warning</td>
+<td class='tra'  lang='zh-Hans'>
+警告</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert</td>
+<td class='tra'  lang='zh-Hans'>
+警报</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Unknown</td>
+<td class='tra'  lang='zh-Hans'>
+未知</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Data</td>
+<td class='tra'  lang='zh-Hans'>
+无数据</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+CPU Usage %</td>
+<td class='tra'  lang='zh-Hans'>
+CPU 占用率 %</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+CPU IO Wait %</td>
+<td class='tra'  lang='zh-Hans'>
+CPU IO 等待 %</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+System Load 1 Min</td>
+<td class='tra'  lang='zh-Hans'>
+系统负载 1 分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+System Load 5 Min</td>
+<td class='tra'  lang='zh-Hans'>
+系统负载 5 分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+System Load 15 Min</td>
+<td class='tra'  lang='zh-Hans'>
+系统负载 15 分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Service/Process Not Running</td>
+<td class='tra'  lang='zh-Hans'>
+服务/进程未运行</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+RAM Usage %</td>
+<td class='tra'  lang='zh-Hans'>
+内存使用 %</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+RAM Usage MB</td>
+<td class='tra'  lang='zh-Hans'>
+内存使用 MB</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Swap Usage %</td>
+<td class='tra'  lang='zh-Hans'>
+虚拟内存使用 %</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Swap Usage MB</td>
+<td class='tra'  lang='zh-Hans'>
+虚拟内存使用 MB</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disk Usage % (Aggregated)</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘使用 % （汇总）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disk Usage GB (Aggregated)</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘使用 GB（汇总）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disk Usage %:</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘使用 %:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disk Usage GB:</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘使用 GB：</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Connections</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SSH Sessions</td>
+<td class='tra'  lang='zh-Hans'>
+SSH 会话</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Ping Latency</td>
+<td class='tra'  lang='zh-Hans'>
+PING 延迟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Network Download Speed MB/s</td>
+<td class='tra'  lang='zh-Hans'>
+网络下载速度 MB/s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Network Upload Speed MB/s</td>
+<td class='tra'  lang='zh-Hans'>
+网络上传速度 MB/s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hooray! All websites are healthy.</td>
+<td class='tra'  lang='zh-Hans'>
+恭喜！ 所有网站都很健康。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+website alerts.</td>
+<td class='tra'  lang='zh-Hans'>
+网站警报。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+HTTP Response Code</td>
+<td class='tra'  lang='zh-Hans'>
+HTTP 响应代码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Load Time</td>
+<td class='tra'  lang='zh-Hans'>
+加载时间</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search String Missing</td>
+<td class='tra'  lang='zh-Hans'>
+搜索字符串丢失</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hooray! All checks are healthy.</td>
+<td class='tra'  lang='zh-Hans'>
+恭喜！ 所有检查都是健康的。</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+checks alerts.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Check Offline</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Response Time</td>
+<td class='tra'  lang='zh-Hans'>
+响应时间</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Listed In Blacklist</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+DNS Lookup Failed</td>
+<td class='tra'  lang='zh-Hans'>
+DNS 查询失败</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Autorefresh</td>
+<td class='tra'  lang='zh-Hans'>
+自动刷新</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disabled</td>
+<td class='tra'  lang='zh-Hans'>
+已禁用</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 30 Seconds</td>
+<td class='tra'  lang='zh-Hans'>
+每30秒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 1 Minute</td>
+<td class='tra'  lang='zh-Hans'>
+每1分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 2 Minutes</td>
+<td class='tra'  lang='zh-Hans'>
+每2分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 5 Minutes</td>
+<td class='tra'  lang='zh-Hans'>
+每5分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 10 Minutes</td>
+<td class='tra'  lang='zh-Hans'>
+每10分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Every 15 Minutes</td>
+<td class='tra'  lang='zh-Hans'>
+每15分钟</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Quick actions</td>
+<td class='tra'  lang='zh-Hans'>
+快捷操作</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Server</td>
+<td class='tra'  lang='zh-Hans'>
+添加服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Website</td>
+<td class='tra'  lang='zh-Hans'>
+添加网站</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Check</td>
+<td class='tra'  lang='zh-Hans'>
+添加检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Contact</td>
+<td class='tra'  lang='zh-Hans'>
+添加联系人</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Page</td>
+<td class='tra'  lang='zh-Hans'>
+添加页面</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Profile</td>
+<td class='tra'  lang='zh-Hans'>
+资料</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sign Out</td>
+<td class='tra'  lang='zh-Hans'>
+登出</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Online</td>
+<td class='tra'  lang='zh-Hans'>
+在线</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search...</td>
+<td class='tra'  lang='zh-Hans'>
+搜索...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+MAIN NAVIGATION</td>
+<td class='tra'  lang='zh-Hans'>
+主菜单</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dashboard</td>
+<td class='tra'  lang='zh-Hans'>
+控制台</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Servers</td>
+<td class='tra'  lang='zh-Hans'>
+服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Websites</td>
+<td class='tra'  lang='zh-Hans'>
+网站</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Checks</td>
+<td class='tra'  lang='zh-Hans'>
+检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alerting</td>
+<td class='tra'  lang='zh-Hans'>
+提醒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contacts</td>
+<td class='tra'  lang='zh-Hans'>
+联系人</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log</td>
+<td class='tra'  lang='zh-Hans'>
+日志</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pages</td>
+<td class='tra'  lang='zh-Hans'>
+页面</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+System</td>
+<td class='tra'  lang='zh-Hans'>
+系统</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Users</td>
+<td class='tra'  lang='zh-Hans'>
+用户</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Roles</td>
+<td class='tra'  lang='zh-Hans'>
+角色</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Groups</td>
+<td class='tra'  lang='zh-Hans'>
+小组</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Logs</td>
+<td class='tra'  lang='zh-Hans'>
+日志</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Settings</td>
+<td class='tra'  lang='zh-Hans'>
+设置</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Add Check Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Alert Type</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Comparison</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Limit</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Status</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Active</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Inactive</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Occurrences</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+If the problem occurs for more than this value an incident will be opened and the selected contacts will be notified.</td>
+<td class='tra'  lang='zh-Hans'>
+如果问题发生的时间超过此值，则会打开一个事件并通知所选联系人。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contacts selected here will receive notifications for this alert.</td>
+<td class='tra'  lang='zh-Hans'>
+此处选择的联系人将收到有关此警报的通知。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cancel</td>
+<td class='tra'  lang='zh-Hans'>
+取消</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Alert</td>
+<td class='tra'  lang='zh-Hans'>
+添加提醒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please select</td>
+<td class='tra'  lang='zh-Hans'>
+请选择</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Alert</td>
+<td class='tra'  lang='zh-Hans'>
+删除提醒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this alert?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此提醒吗？</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+No</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Yes</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit Check Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save</td>
+<td class='tra'  lang='zh-Hans'>
+保存</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mark Resolved</td>
+<td class='tra'  lang='zh-Hans'>
+标记已解决</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to mark this incident as resolved?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要将此事件标记为已解决吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+If the problem is not resolved a new incident will be created.</td>
+<td class='tra'  lang='zh-Hans'>
+如果问题没有得到解决，就会产生一个新的事件。</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Name</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Name, hostname or other for easy identification</td>
+<td class='tra'  lang='zh-Hans'>
+主机名、IP 地址或其他以便于识别</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Group</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Common Services</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Services</td>
+<td class='tra'  lang='zh-Hans'>
+服务</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+FTP (Monitor a FTP server)</td>
+<td class='tra'  lang='zh-Hans'>
+FTP（监视 FTP 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SSH (Monitor a SSH server)</td>
+<td class='tra'  lang='zh-Hans'>
+SSH（监控 SSH 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+RDP (Monitor a RDP server)</td>
+<td class='tra'  lang='zh-Hans'>
+RDP（监控 RDP 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+HTTP (Monitor a HTTP server)</td>
+<td class='tra'  lang='zh-Hans'>
+HTTP（监控 HTTP 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+HTTPS (Monitor a HTTPS server)</td>
+<td class='tra'  lang='zh-Hans'>
+HTTPS（监控 HTTPS 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+DNS (Monitor a DNS server)</td>
+<td class='tra'  lang='zh-Hans'>
+DNS（监控 DNS 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SMTP (Monitor a SMTP server)</td>
+<td class='tra'  lang='zh-Hans'>
+SMTP（监视 SMTP 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+POP3 (Monitor a POP3 server)</td>
+<td class='tra'  lang='zh-Hans'>
+POP3（监控 POP3 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+IMAP (Monitor a IMAP server)</td>
+<td class='tra'  lang='zh-Hans'>
+IMAP（监控 IMAP 服务器）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Others</td>
+<td class='tra'  lang='zh-Hans'>
+其他</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+TCP (Monitor a TCP port)</td>
+<td class='tra'  lang='zh-Hans'>
+TCP（监视 TCP 端口）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+UDP (Monitor a UDP port)</td>
+<td class='tra'  lang='zh-Hans'>
+UDP（监视 UDP 端口）</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ICMP (Ping)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+DNS Lookup</td>
+<td class='tra'  lang='zh-Hans'>
+DNS查询</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+IP Blacklist (Check IP Blacklists for a particular IP)</td>
+<td class='tra'  lang='zh-Hans'>
+IP 黑名单（检查特定 IP 的 IP 黑名单）</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Type</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+TCP</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+UDP</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+DNS</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+IP Blacklist</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Port</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Timeout (s)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Host</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Domain or IP Address to check</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Send String</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Expected Response</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Search Address</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enter address to autofill coordinates</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Latitude</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Invalid Latitude Value</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Longitude</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Invalid Longitude Value</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Show on map</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+DNS Server</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Delete Check</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this check?</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit Check</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Email Address</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Leave blank to disable email alerts for this contact.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Mobile Number</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Leave blank to disable SMS alerts for this contact.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
++12345678901</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pushbullet</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Leave blank to disable Pushbullet alerts for this contact.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+API Access Token</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Twitter</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Leave blank to disable Twitter alerts for this contact.</td>
+<td class='tra'  lang='zh-Hans'>
+留空以禁用此联系人的 Twitter 警报。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Twitter Username</td>
+<td class='tra'  lang='zh-Hans'>
+Twitter用户名</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pushover</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Leave blank to disable Pushover alerts for this contact.</td>
+<td class='tra'  lang='zh-Hans'>
+留空可禁用此联系人的 Pushover 警报。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pushover User Key</td>
+<td class='tra'  lang='zh-Hans'>
+Pushover 用户密钥</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Contact</td>
+<td class='tra'  lang='zh-Hans'>
+删除联系人</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this contact?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此联系人吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Contact</td>
+<td class='tra'  lang='zh-Hans'>
+编辑联系资料</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Group</td>
+<td class='tra'  lang='zh-Hans'>
+添加组</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Group</td>
+<td class='tra'  lang='zh-Hans'>
+删除组</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this group?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此组吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Group</td>
+<td class='tra'  lang='zh-Hans'>
+编辑小组</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Create New Language</td>
+<td class='tra'  lang='zh-Hans'>
+新建语言</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Code</td>
+<td class='tra'  lang='zh-Hans'>
+代码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+2-Letter language code (example: en, fr, it).</td>
+<td class='tra'  lang='zh-Hans'>
+2 字母语言代码（例如：en,fr,it）。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add</td>
+<td class='tra'  lang='zh-Hans'>
+添加</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Language</td>
+<td class='tra'  lang='zh-Hans'>
+删除语言</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this language?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此语言吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Notification Template</td>
+<td class='tra'  lang='zh-Hans'>
+编辑通知模板</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Subject</td>
+<td class='tra'  lang='zh-Hans'>
+标题</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Message</td>
+<td class='tra'  lang='zh-Hans'>
+信息</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Name</td>
+<td class='tra'  lang='zh-Hans'>
+页面名称</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Description</td>
+<td class='tra'  lang='zh-Hans'>
+页面描述</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Page</td>
+<td class='tra'  lang='zh-Hans'>
+删除页面</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this page?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此页面吗？</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Delete Role</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this role?</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Add Server Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+RAM &amp; Disk</td>
+<td class='tra'  lang='zh-Hans'>
+内存和磁盘</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Network</td>
+<td class='tra'  lang='zh-Hans'>
+网络</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Service</td>
+<td class='tra'  lang='zh-Hans'>
+服务</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit Server Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hostname, IP Address or other for easy identification.</td>
+<td class='tra'  lang='zh-Hans'>
+主机名、IP 地址或其他以便于识别。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Platform</td>
+<td class='tra'  lang='zh-Hans'>
+平台</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Linux</td>
+<td class='tra'  lang='zh-Hans'>
+Linux</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Windows</td>
+<td class='tra'  lang='zh-Hans'>
+Windows</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+(BETA)</td>
+<td class='tra'  lang='zh-Hans'>
+（测试版）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Server</td>
+<td class='tra'  lang='zh-Hans'>
+删除服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this server?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此服务器吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Server</td>
+<td class='tra'  lang='zh-Hans'>
+编辑服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install Instructions</td>
+<td class='tra'  lang='zh-Hans'>
+安装说明</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install nMon Server Agent</td>
+<td class='tra'  lang='zh-Hans'>
+安装 MoYuServer Status 服务器监测脚本</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please run the following command as root to install or reinstall the nMon agent on server</td>
+<td class='tra'  lang='zh-Hans'>
+请以 root 身份运行以下命令以在服务器上安装或重新安装 MoYuServer Status 服务器监测脚本</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copy</td>
+<td class='tra'  lang='zh-Hans'>
+复制</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Close</td>
+<td class='tra'  lang='zh-Hans'>
+关闭</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Follow the steps below to install the nMon Windows Agent on this server:</td>
+<td class='tra'  lang='zh-Hans'>
+按照以下步骤在此服务器上安装 MoYuServer Status Windows 监测脚本：</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Download agent installer from </td>
+<td class='tra'  lang='zh-Hans'>
+从以下位置下载脚本安装程序 </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+here</td>
+<td class='tra'  lang='zh-Hans'>
+这里</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+and install on your server.</td>
+<td class='tra'  lang='zh-Hans'>
+并安装在您的服务器上。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Open nMon Agent after installation finishes.</td>
+<td class='tra'  lang='zh-Hans'>
+安装完成后打开 MoYuServer Status 监测脚本。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Apply the following configuration and close the window</td>
+<td class='tra'  lang='zh-Hans'>
+应用以下配置并关闭窗口</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Agent will begin reporting data to nMon in a few minutes.</td>
+<td class='tra'  lang='zh-Hans'>
+脚本将在几分钟内开始向 MoYuServer Status 报告数据。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copy Server Key</td>
+<td class='tra'  lang='zh-Hans'>
+复制服务器密钥</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copy Gateway Address</td>
+<td class='tra'  lang='zh-Hans'>
+复制Gateway地址</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add User</td>
+<td class='tra'  lang='zh-Hans'>
+添加用户</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Role</td>
+<td class='tra'  lang='zh-Hans'>
+角色</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password</td>
+<td class='tra'  lang='zh-Hans'>
+密码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Send new staff account email notification</td>
+<td class='tra'  lang='zh-Hans'>
+发送新员工帐户电子邮件通知</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete User</td>
+<td class='tra'  lang='zh-Hans'>
+删除用户</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this user?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此用户吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Website Alert</td>
+<td class='tra'  lang='zh-Hans'>
+添加网站警报</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Limit/Value</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+If the problem occurs for more than this value, in a row, an incident will be opened and the selected contacts will be notified.</td>
+<td class='tra'  lang='zh-Hans'>
+如果出现问题的时间超过此值，则会连续打开一个事件并通知所选联系人。</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit Website Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+URL</td>
+<td class='tra'  lang='zh-Hans'>
+网址</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+http://www.mydomain.com</td>
+<td class='tra'  lang='zh-Hans'>
+http://www.mydomain.com</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Incorrect URL! (eg. http://www.google.com)</td>
+<td class='tra'  lang='zh-Hans'>
+网址不正确!（例如。http://www.google.com）</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search String</td>
+<td class='tra'  lang='zh-Hans'>
+搜索字符串</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+String to search for in webiste's source code (optional).</td>
+<td class='tra'  lang='zh-Hans'>
+在网站的源代码中搜索的字符串（可选）。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Website</td>
+<td class='tra'  lang='zh-Hans'>
+删除网站</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this website?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此网站吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Website</td>
+<td class='tra'  lang='zh-Hans'>
+编辑网站</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Manage contacts</td>
+<td class='tra'  lang='zh-Hans'>
+管理联系人</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+NEW CONTACT</td>
+<td class='tra'  lang='zh-Hans'>
+新联系人</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ID</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Channels</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email:</td>
+<td class='tra'  lang='zh-Hans'>
+电子邮箱：</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mobile Number:</td>
+<td class='tra'  lang='zh-Hans'>
+手机号码：</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pushbullet:</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Twitter:</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pushover:</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View alert log</td>
+<td class='tra'  lang='zh-Hans'>
+查看警报日志</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Date</td>
+<td class='tra'  lang='zh-Hans'>
+日期</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contact</td>
+<td class='tra'  lang='zh-Hans'>
+联系</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Manage checks</td>
+<td class='tra'  lang='zh-Hans'>
+管理检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ADD CHECK</td>
+<td class='tra'  lang='zh-Hans'>
+添加检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last Checked</td>
+<td class='tra'  lang='zh-Hans'>
+上次检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Uptime</td>
+<td class='tra'  lang='zh-Hans'>
+运行时间</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+OK</td>
+<td class='tra'  lang='zh-Hans'>
+正常</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+TCP Port</td>
+<td class='tra'  lang='zh-Hans'>
+TCP端口</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+UDP Port</td>
+<td class='tra'  lang='zh-Hans'>
+UDP端口</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Blacklist Check</td>
+<td class='tra'  lang='zh-Hans'>
+黑名单检查</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last 24 Hours</td>
+<td class='tra'  lang='zh-Hans'>
+最近24小时</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last 7 Days</td>
+<td class='tra'  lang='zh-Hans'>
+最近 7天</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last 30 Days</td>
+<td class='tra'  lang='zh-Hans'>
+最近30天</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Home</td>
+<td class='tra'  lang='zh-Hans'>
+首页</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Overview</td>
+<td class='tra'  lang='zh-Hans'>
+概览</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Incidents</td>
+<td class='tra'  lang='zh-Hans'>
+事件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Date Range</td>
+<td class='tra'  lang='zh-Hans'>
+日期范围</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No data!</td>
+<td class='tra'  lang='zh-Hans'>
+没有数据！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No data available for the selected period or no data has been collected yet.</td>
+<td class='tra'  lang='zh-Hans'>
+所选期间没有可用数据或尚未收集任何数据。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Blacklists</td>
+<td class='tra'  lang='zh-Hans'>
+黑名单</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Blacklist</td>
+<td class='tra'  lang='zh-Hans'>
+黑名单</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+LISTED</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Detailed Log</td>
+<td class='tra'  lang='zh-Hans'>
+详细日志</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last 50 Checks</td>
+<td class='tra'  lang='zh-Hans'>
+最近 50 次检查</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Failed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Blacklisted</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Offline</td>
+<td class='tra'  lang='zh-Hans'>
+离线</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Incident</td>
+<td class='tra'  lang='zh-Hans'>
+事件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Start Time</td>
+<td class='tra'  lang='zh-Hans'>
+开始时间</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Website Info</td>
+<td class='tra'  lang='zh-Hans'>
+网站信息</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Check Type</td>
+<td class='tra'  lang='zh-Hans'>
+检查类型</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+N/A</td>
+<td class='tra'  lang='zh-Hans'>
+无</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Timeout</td>
+<td class='tra'  lang='zh-Hans'>
+超时</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last Load Time</td>
+<td class='tra'  lang='zh-Hans'>
+上次加载时间</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Selected Period</td>
+<td class='tra'  lang='zh-Hans'>
+选定时期</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Action</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+If occurs</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+times</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+alert:</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+End Time</td>
+<td class='tra'  lang='zh-Hans'>
+结束时间</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Performance</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Plese delete the "install" directory!</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+View all</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add a Google Maps API key in System &gt; Settings in order to display monitors status on map.</td>
+<td class='tra'  lang='zh-Hans'>
+在系统 &gt; 设置中添加 Google Maps API 密钥，以便在地图上显示监视器状态。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Around the world</td>
+<td class='tra'  lang='zh-Hans'>
+世界各地</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add a Google Maps API key in settings for a more detailed map.</td>
+<td class='tra'  lang='zh-Hans'>
+在设置中添加 Google Maps API 密钥以获得更详细的地图。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Servers Overview</td>
+<td class='tra'  lang='zh-Hans'>
+服务器概览</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Server</td>
+<td class='tra'  lang='zh-Hans'>
+服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Websites Overview</td>
+<td class='tra'  lang='zh-Hans'>
+网站概览</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Website</td>
+<td class='tra'  lang='zh-Hans'>
+网站</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Checks Overview</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Check</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Check: </td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Server: </td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Website: </td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Manage pages</td>
+<td class='tra'  lang='zh-Hans'>
+管理页面</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ADD PAGE</td>
+<td class='tra'  lang='zh-Hans'>
+添加页面</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit profile</td>
+<td class='tra'  lang='zh-Hans'>
+编辑个人资料</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+My Profile</td>
+<td class='tra'  lang='zh-Hans'>
+我的个人资料</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change Password</td>
+<td class='tra'  lang='zh-Hans'>
+更改密码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enter only if you want to change</td>
+<td class='tra'  lang='zh-Hans'>
+仅当您想更改时才输入</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Avatar</td>
+<td class='tra'  lang='zh-Hans'>
+头像</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Square JPG image only, recommended size: 128x128px.</td>
+<td class='tra'  lang='zh-Hans'>
+仅限方形 JPG 图片，推荐尺寸：128x128px。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove Avatar Image</td>
+<td class='tra'  lang='zh-Hans'>
+删除头像</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Language</td>
+<td class='tra'  lang='zh-Hans'>
+语言</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Theme</td>
+<td class='tra'  lang='zh-Hans'>
+主题</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Dark</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Blue</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Black</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Purple</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Green</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Red</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Yellow</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Blue Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Black Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Purple Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Green Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Red Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Yellow Light</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Sidebar</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Opened</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Collapsed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Layout</td>
+<td class='tra'  lang='zh-Hans'>
+布局</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Standard</td>
+<td class='tra'  lang='zh-Hans'>
+标准</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Fixed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Boxed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Confirm Password</td>
+<td class='tra'  lang='zh-Hans'>
+确认密码</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please confirm your current password to make changes to your profile.</td>
+<td class='tra'  lang='zh-Hans'>
+请确认您当前的密码以更改您的个人资料。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search</td>
+<td class='tra'  lang='zh-Hans'>
+搜索</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search system wide</td>
+<td class='tra'  lang='zh-Hans'>
+搜索系统范围</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search String...</td>
+<td class='tra'  lang='zh-Hans'>
+搜索字符串...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Manage servers</td>
+<td class='tra'  lang='zh-Hans'>
+管理服务器</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ADD SERVER</td>
+<td class='tra'  lang='zh-Hans'>
+添加服务器</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+OS</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPU</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+RAM</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disk</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Load</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Net</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Last Seen</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+% Used</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Total</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Used</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Free</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+1 Min</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+5 Min</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+15 Min</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+/s</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+-</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Never Seen</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disks</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Processes</td>
+<td class='tra'  lang='zh-Hans'>
+进程</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No data available for the selected period or no data has been received yet.</td>
+<td class='tra'  lang='zh-Hans'>
+所选期间没有可用数据或尚未收到任何数据。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Server Info</td>
+<td class='tra'  lang='zh-Hans'>
+服务器信息</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hostname</td>
+<td class='tra'  lang='zh-Hans'>
+主机名</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Operating System</td>
+<td class='tra'  lang='zh-Hans'>
+操作系统</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Kernel</td>
+<td class='tra'  lang='zh-Hans'>
+内核</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Arch</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Server Time</td>
+<td class='tra'  lang='zh-Hans'>
+服务器时间</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+CPU Model</td>
+<td class='tra'  lang='zh-Hans'>
+CPU型号</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+CPU Cores</td>
+<td class='tra'  lang='zh-Hans'>
+CPU内核</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cores</td>
+<td class='tra'  lang='zh-Hans'>
+核</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+(1 Min)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+(5 Min)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+(15 Min)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Available</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Swap</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+MB Used</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+MB Total</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+IP Address</td>
+<td class='tra'  lang='zh-Hans'>
+IP地址</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Active Connections</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+PING Latency</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ms</td>
+<td class='tra'  lang='zh-Hans'>
+毫秒</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Agent Version</td>
+<td class='tra'  lang='zh-Hans'>
+监测脚本版本号</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disk Usage</td>
+<td class='tra'  lang='zh-Hans'>
+磁盘使用情况</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Mount</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Network Usage</td>
+<td class='tra'  lang='zh-Hans'>
+网络使用</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Interface</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+In</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Out</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+CPU Usage</td>
+<td class='tra'  lang='zh-Hans'>
+CPU 使用率</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Core</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+RAM Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Including Caches &amp; Buffers</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SWAP Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Device</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filesystem</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Size</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Inodes</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+I-Used</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+I-Free</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+I-Used %</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disks Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Inode Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+In Speed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Out Speed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Total Speed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+In Packets</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Out Packets</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Total Packets</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Speed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+p/s</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Network Speed</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+PID</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+PPID</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+RSS</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+VSZ</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+USER</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+%MEM</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+%CPU</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+COMMAND</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CMD</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Service name as found in the Processes table &gt; COMMAND column.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+If Service/Process not running</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Aggregated Usage</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Load Averages</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+MB</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+MB/s</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+user</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+nice</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+system</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+iowait</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+irq</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+softirq</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+steal</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+guest</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+guestnice</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPU Chart</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Buffers</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Caches</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Total Used</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Real Memory</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Latency</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SSH</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+All</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Motherboard</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+BIOS</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+File Systems</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Used %</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Serial Number</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Command</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPU System %</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPU User %</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Memory %</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Started</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Service name as found in the Processes table &gt; Name column.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage groups</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+NEW GROUP</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+View application logs</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Activity Log</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Email Message Log</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMS Message Log</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Cron Log</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+User</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Description</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Timestamp</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Mobile</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Text</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+data</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage user roles</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+NEW ROLE</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Role Name</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage roles</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+People</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Create</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Create New Role</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Delete</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+View</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage Settings</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+View System Logs</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+View Alert Logs</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Show System Menu</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit Role</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+System configuration</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+General</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Monitoring</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Localisation</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMS Gateway</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Notifications</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Cron Jobs</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Application Name</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Application Name as it appears throughout the system</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Application URL</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Full installation URL including http:// or https:// (eg. http://mydomain.com/nmon/)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Company Name</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Company Name as it appears throughout the system</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Company Details</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Company Details used in the system for reports</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+System Log Retention</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Delete system log entries older then (days)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Record to Display per Page</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Google Maps API Key</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Adding a Google Maps API Key will switch the dashboard map to Google Maps and will allow you to set custom location for your assets.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Save Changes</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Check Timeout (s)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Default check timeout in seconds.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+History Retention (days)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Server, website, check &amp; alert history older than this value will be deleted.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Default Contacts</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Contacts selected will be used for default alerts when adding new server, website or check.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+First Day of The Week</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Monday</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Sunday</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Default Language</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Timezone</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Date Format</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Languages</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+NEW LANGUAGE</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Actions</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Email From Address</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Emails From Name</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enable SMTP</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Requires Authentication</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Host</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Port</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Username</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Password</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Security</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+None</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SSL</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+TLS</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMTP Authentication Domain</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use in case of connecting to an Exchange server or similar server requiring NTLM authentication.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+SMS Provider</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Username/Account SID</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Password/Auth Token</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+API ID</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Only for Clickatell</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+From Name/Number</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+For SMS Global or Twillio</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Consumer Key (API Key)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Consumer Secret (API Secret)</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Access Token</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Access Token Secret</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pushover Application API Token</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+New User</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Password Reset</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+nMon Incident Alert</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+System Cron Job</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+or</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+This cron job will check websites and checks, process alerts and send notifications if needed, every 3 minutes.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage user accounts</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+NEW USER</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Edit user</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enter only if you want to change current password.</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Notes</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Manage websites</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ADD WEBSITE</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+HTTP Status Code</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Present</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Missing</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Opened Incidents</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+WARNING</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ALERT</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+UNKNOWN</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+HTTP</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Deprecated!</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Referencing a public page by ID is now deprecated and will be removed in the next version.</td>
+<td class='tra'  lang='zh-Hans'>
+通过 ID 引用公共页面现在已被弃用，并将在下一个版本中删除。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You can get the new link from the admin panel.</td>
+<td class='tra'  lang='zh-Hans'>
+您可以从管理面板获取新链接。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Not Found!</td>
+<td class='tra'  lang='zh-Hans'>
+ERROR 404 找不到网页！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This page does not exist or an invalid page key was provided.</td>
+<td class='tra'  lang='zh-Hans'>
+此页面不存在或提供了无效的页面密钥。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copyright</td>
+<td class='tra'  lang='zh-Hans'>
+版权</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All rights reserved.</td>
+<td class='tra'  lang='zh-Hans'>
+保留所有权利.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sign in to start your session</td>
+<td class='tra'  lang='zh-Hans'>
+登录账户</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sign In</td>
+<td class='tra'  lang='zh-Hans'>
+登录</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Forgot your password?</td>
+<td class='tra'  lang='zh-Hans'>
+忘记密码？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete File</td>
+<td class='tra'  lang='zh-Hans'>
+删除文件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete this file?</td>
+<td class='tra'  lang='zh-Hans'>
+您确定要删除此文件吗？</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Upload File</td>
+<td class='tra'  lang='zh-Hans'>
+上传文件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+File</td>
+<td class='tra'  lang='zh-Hans'>
+文件</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Max upload file size on your server is</td>
+<td class='tra'  lang='zh-Hans'>
+您服务器上的最大上传文件大小为</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Upload</td>
+<td class='tra'  lang='zh-Hans'>
+上传</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Now</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d second ago</li>
+  <li>%d seconds ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 秒前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d minute ago</li>
+  <li>%d minutes ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 分钟前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d hour ago</li>
+  <li>%d hours ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 小时前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d day ago</li>
+  <li>%d days ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 天前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d month ago</li>
+  <li>%d months ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 月前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%d year ago</li>
+  <li>%d years ago</li>
+</ol>
+</td>
+<td class='tra'  lang='zh-Hans'>
+<ol class='plurals'>
+  <li>%d 年前</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Error! Cannot add item.</td>
+<td class='tra'  lang='zh-Hans'>
+错误！ 无法添加项目。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Error! Cannot save item.</td>
+<td class='tra'  lang='zh-Hans'>
+错误！ 无法保存项目。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Error! Cannot delete item.</td>
+<td class='tra'  lang='zh-Hans'>
+错误！ 无法删除项目。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Item has been deleted successfully!</td>
+<td class='tra'  lang='zh-Hans'>
+项目已成功删除！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Item has been saved successfully!</td>
+<td class='tra'  lang='zh-Hans'>
+项目已成功保存！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Item has been added successfully!</td>
+<td class='tra'  lang='zh-Hans'>
+项目已成功添加！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Settings updated successfully!</td>
+<td class='tra'  lang='zh-Hans'>
+设置更新成功！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Authentication Failed!</td>
+<td class='tra'  lang='zh-Hans'>
+认证失败！</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please check your email for a password reset link.</td>
+<td class='tra'  lang='zh-Hans'>
+请检查您的电子邮件以获取密码重置链接。</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email address was not found.</td>
+<td class='tra'  lang='zh-Hans'>
+未找到电子邮件地址。</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Invalid reset key!</td>
+<td class='tra'  lang='zh-Hans'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Success. Please log in with your new password!</td>
+<td class='tra'  lang='zh-Hans'>
+成功。 请使用您的新密码登录！</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
